@@ -1,0 +1,16 @@
+<mat-card class="card-indicator">
+  <div></div>
+  <div>
+    <canvas baseChart
+      [type]="'pie'"
+      [datasets]="pieChartDatasets"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+    <div>Mes/año con mayor cantidad de clientes: {{ convertMonth(indicatorMaximun.mes) }} / {{ indicatorMaximun.anio }}</div>
+    <div>Mes/año con menor cantidad de clientes: {{ convertMonth(indicatorMinimum.mes) }} / {{ indicatorMinimum.anio }}</div>
+  </div>
+  <div></div>
+</mat-card>
